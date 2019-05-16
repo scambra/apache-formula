@@ -9,7 +9,7 @@ libapache2-mod-upload-progress:
 
 a2enmod upload_progress:
   cmd.run:
-    - unless: ls /etc/apache2/mods-enabled/upload_progress.load && ls /etc/apache2/mods-enabled/upload_progress.conf
+    - unless: ls /etc/apache2/mods-enabled/upload_progress.load
     - order: 255
     - require:
       - pkg: libapache2-mod-upload-progress
